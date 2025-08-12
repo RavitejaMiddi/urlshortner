@@ -31,15 +31,15 @@ It provides APIs to shorten long URLs, retrieve original URLs, and redirect to t
 2.Configure Database
 - Update application.properties with your DB credentials.
   
-spring.datasource.url=jdbc:postgresql://localhost:5432/urlshortener
-spring.datasource.username=youruser
-spring.datasource.password=yourpassword
+spring.datasource.url=jdbc:postgresql://localhost:5432/urlshortener;
+spring.datasource.username=youruser;
+spring.datasource.password=yourpassword;
 spring.jpa.hibernate.ddl-auto=update
 
 
 3.Build & Run
 
-mvn clean install
+mvn clean install;
 mvn spring-boot:run
 
 
