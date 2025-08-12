@@ -23,8 +23,8 @@ It provides APIs to shorten long URLs, retrieve original URLs, and redirect to t
 
 ## Setup Instructions
 <h3>1. **Clone the repository**</h3>
-   ```bash
-   git clone https://github.com/RavitejaMiddi/urlshortener.git
+ 
+   git clone https://github.com/RavitejaMiddi/urlshortener.git</br>
    cd urlshortener
 
 
