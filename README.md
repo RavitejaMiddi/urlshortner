@@ -22,13 +22,13 @@ It provides APIs to shorten long URLs, retrieve original URLs, and redirect to t
 | GET    | `/api/stats/{code}`  | (Optional) Returns usage statistics |
 
 ## Setup Instructions
-1. **Clone the repository**
+<h3>1. **Clone the repository**</h3>
    ```bash
    git clone https://github.com/RavitejaMiddi/urlshortener.git
    cd urlshortener
 
 
-2.Configure Database
+<h3>2.Configure Database</h3>
 - Update application.properties with your DB credentials.
   
 spring.datasource.url=jdbc:postgresql://localhost:5432/urlshortener </br>
@@ -37,12 +37,12 @@ spring.datasource.password=yourpassword</br>
 spring.jpa.hibernate.ddl-auto=update
 
 
-3.Build & Run
+<h3>3.Build & Run</h3>
 
 mvn clean install</br>
 mvn spring-boot:run
 
 
-4.Test API
+<h3>4.Test API</h3>
 
 Use Postman or curl to test the endpoints.
