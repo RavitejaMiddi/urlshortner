@@ -3,33 +3,34 @@ package com.urlshortner.entitys;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "urls")
 public class UrlMapping {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
 
-    @Column(name = "original_url", nullable = false, length = 2048)
-    private String originalUrl;
+        @Column(name = "original_url", nullable = false,length = 2000)
+        private String originalUrl;
 
-    @Column(name = "short_code", nullable = false, unique = true, length = 10)
-    private String shortCode;
+        @Column(name = "short_code", nullable = false, unique = true)
+        private String shortCode;
 
-    @Column(name = "created_at", nullable = false)
-    private LocalDateTime createdAt;
+        @Column(name = "created_at", nullable = false)
+        private LocalDateTime createdAt;
 
-    @Column(name = "expiry_date")
-    private LocalDateTime expiryDate;
+        @Column(name = "expiry_date")
+        private Date expiryDate;
 
-    @Column(name = "click_count", nullable = false)
-    private Long clickCount = 0L;
+        @Column(name = "click_count", nullable = false)
+        private Long clickCount = 0L;
 
     // Constructors, getters, setters
 
-    public UrlMapping(Long id, String originalUrl, String shortCode, LocalDateTime createdAt, LocalDateTime expiryDate, Long clickCount) {
+    public UrlMapping( String originalUrl, String shortCode, LocalDateTime createdAt, Date expiryDate, Long clickCount) {
        // this.id = id;
         this.originalUrl = originalUrl;
         this.shortCode = shortCode;
@@ -73,11 +74,11 @@ public class UrlMapping {
         this.createdAt = createdAt;
     }
 
-    public LocalDateTime getExpiryDate() {
+    public Date getExpiryDate() {
         return expiryDate;
     }
 
-    public void setExpiryDate(LocalDateTime expiryDate) {
+    public void setExpiryDate(Date expiryDate) {
         this.expiryDate = expiryDate;
     }
 
